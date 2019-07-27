@@ -11,10 +11,5 @@ def count_pushes(floors, start, goal, up, down)
   "use the stairs"
 end
 
-input_data = File.read("data/1.in").split
-output = count_pushes(input_data[0], input_data[1], input_data[2], input_data[3], input_data[4])
-puts output
-
-input_data = File.read("data/2.in").split
-output = count_pushes(input_data[0], input_data[1], input_data[2], input_data[3], input_data[4])
-puts output
+input_data = ARGF.read.split
+puts count_pushes(input_data[0], input_data[1], input_data[2], input_data[3], input_data[4])
