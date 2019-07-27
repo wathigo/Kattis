@@ -5,14 +5,6 @@ def count_words(bites, words)
   "makes sense"
 end
 
-input_data = File.read("data/1.in").split
+input_data = ARGF.read.split
 length = input_data.shift
-puts count_words(length, input_data).split(" ") == File.read("data/1.ans").split(" ")
-
-input_data = File.read("data/2.in").split
-length = input_data.shift
-puts count_words(length, input_data).split(" ") == File.read("data/2.ans").split(" ")
-
-input_data = File.read("data/2.in").split
-length = input_data.shift
-puts count_words(length, input_data).split(" ") == File.read("data/2.ans").split(" ")
+puts count_words(length, input_data)
